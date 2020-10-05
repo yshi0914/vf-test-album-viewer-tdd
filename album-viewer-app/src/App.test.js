@@ -1,9 +1,22 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import App from "./App";
+import { shallow, mount } from "enzyme";
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("App component after mounting", () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = mount(<App />);
+  });
+  test("render the big title of this Album Viewer App", () => {
+    expect(wrapper.find("h1").text()).toContain(
+      "All albums with its associated User Name"
+    );
+  });
+});
+
+describe("App component snapshot testing", () => {
+  test("matches the snapshot", () => {
+    const component = shallow(<App />);
+    expect(component.getElements()).toMatchSnapshot();
+  });
 });
