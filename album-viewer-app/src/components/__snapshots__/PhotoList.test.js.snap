@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhotoList component snapshot testing matches the snapshot 1`] = `
+Array [
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <PhotoList
+      data={
+        Object {
+          "albumId": 1,
+          "id": 1,
+          "thumbnailUrl": "https://via.placeholder.com/150/92c952",
+          "title": "accusamus beatae ad facilis cum similique qui sunt",
+          "url": "https://via.placeholder.com/600/92c952",
+        }
+      }
+    />
+  </Router>,
+]
+`;
